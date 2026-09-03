@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cargo Hub — Building India's Intelligent Post-Harvest Infrastructure</title>
+<meta name="description" content="Cargo Hub unifies India's fragmented post-harvest ecosystem — connecting farmers, mandis, cold storages, logistics, and financial institutions into a single intelligent digital network.">
+<link rel="icon" href="assets/cargohub-logo.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================= NAVBAR ============================= -->
+<header class="navbar">
+  <div class="wrap">
+    <a href="#home" class="brand">
+      <img src="assets/cargohub-logo.jpeg" alt="Cargo Hub logo">
+      <span class="brand-name">Cargo Hub</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#home" data-nav>Home</a>
+      <a href="#platform" data-nav>Platform</a>
+      <a href="#smart-mandi" data-nav>Smart Mandi</a>
+      <a href="#storage-network" data-nav>Storage Network</a>
+      <a href="#government-schemes" data-nav>Government Schemes</a>
+      <a href="#ecosystem-impact" data-nav>Ecosystem Impact</a>
+      <a href="#revenue-model" data-nav>Revenue Model</a>
+      <a href="#roadmap" data-nav>Roadmap</a>
+      <a href="#about-contact" data-nav>About &amp; Contact</a>
+    </nav>
+    <div class="nav-ctas">
+      <button class="btn btn-ghost btn-sm" data-open-modal="warehouse">List Warehouse</button>
+      <button class="btn btn-primary btn-sm" data-open-modal="mandi">Book Mandi Slot</button>
+    </div>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile drawer -->
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="mobile-drawer-top">
+    <a href="#home" class="brand">
+      <img src="assets/cargohub-logo.jpeg" alt="Cargo Hub logo" style="height:30px;">
+      <span class="brand-name">Cargo Hub</span>
+    </a>
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
+  </div>
+  <nav>
+    <a href="#home" data-nav-mobile>Home</a>
+    <a href="#platform" data-nav-mobile>Platform</a>
+    <a href="#smart-mandi" data-nav-mobile>Smart Mandi</a>
+    <a href="#storage-network" data-nav-mobile>Storage Network</a>
+    <a href="#government-schemes" data-nav-mobile>Government Schemes</a>
+    <a href="#ecosystem-impact" data-nav-mobile>Ecosystem Impact</a>
+    <a href="#revenue-model" data-nav-mobile>Revenue Model</a>
+    <a href="#roadmap" data-nav-mobile>Roadmap</a>
+    <a href="#about-contact" data-nav-mobile>About &amp; Contact</a>
+  </nav>
+  <div class="mobile-drawer-ctas">
+    <button class="btn btn-ghost btn-block" data-open-modal="warehouse">List Warehouse</button>
+    <button class="btn btn-primary btn-block" data-open-modal="mandi">Book Mandi Slot</button>
+  </div>
+</div>
+
+<!-- ============================= HERO ============================= -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="hero-eyebrow">INDIA'S INTELLIGENT POST-HARVEST INFRASTRUCTURE LAYER</span>
+      <h1>Connecting mandis, warehouses &amp; supply chains through one platform.</h1>
+      <p class="lede">Cargo Hub unifies India's fragmented post-harvest ecosystem — connecting farmers, mandis, cold storages, logistics, and financial institutions into a single intelligent digital network.</p>
+      <div class="hero-ctas">
+        <a href="#platform" class="btn btn-primary">Explore Platform</a>
+        <button class="btn btn-ghost" data-open-modal="warehouse">Register Facility / Warehouse</button>
+      </div>
+      <div style="margin-top:22px;">
+        <a href="#platform" class="hero-link">View ecosystem model ↓</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <svg class="network-svg" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="pulseGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#1C8C99"/>
+            <stop offset="100%" stop-color="#0A4870"/>
+          </linearGradient>
+        </defs>
+        <!-- connecting lines -->
+        <g stroke="#0A4870" stroke-opacity="0.25" stroke-width="1.4" fill="none">
+          <path d="M240,240 L120,110"/>
+          <path d="M240,240 L360,110"/>
+          <path d="M240,240 L90,260"/>
+          <path d="M240,240 L390,260"/>
+          <path d="M240,240 L150,390"/>
+          <path d="M240,240 L330,390"/>
+          <path d="M120,110 L90,260"/>
+          <path d="M360,110 L390,260"/>
+          <path d="M90,260 L150,390"/>
+          <path d="M390,260 L330,390"/>
+        </g>
+        <!-- animated pulses -->
+        <circle r="3.2" fill="#E3A13B">
+          <animateMotion dur="3.4s" repeatCount="indefinite" path="M240,240 L120,110"/>
+        </circle>
+        <circle r="3.2" fill="#4C8F3E">
+          <animateMotion dur="4.1s" repeatCount="indefinite" path="M240,240 L390,260"/>
+        </circle>
+        <circle r="3.2" fill="#1C8C99">
+          <animateMotion dur="3.7s" repeatCount="indefinite" path="M240,240 L150,390"/>
+        </circle>
+
+        <!-- center node -->
+        <circle cx="240" cy="240" r="46" fill="#062E4A"/>
+        <circle cx="240" cy="240" r="46" fill="none" stroke="#1C8C99" stroke-width="1.5" stroke-opacity="0.5"/>
+        <text x="240" y="236" text-anchor="middle" fill="#fff" font-family="Inter, sans-serif" font-size="10.5" font-weight="600">CARGO HUB</text>
+        <text x="240" y="250" text-anchor="middle" fill="#AEC2D0" font-family="Inter, sans-serif" font-size="8.5">PLATFORM</text>
+
+        <!-- Mandi Slot Booking -->
+        <circle cx="120" cy="110" r="32" fill="#fff" stroke="#0A4870" stroke-width="1.5"/>
+        <text x="120" y="106" text-anchor="middle" fill="#062E4A" font-family="Inter, sans-serif" font-size="9" font-weight="600">Mandi Slot</text>
+        <text x="120" y="118" text-anchor="middle" fill="#062E4A" font-family="Inter, sans-serif" font-size="9" font-weight="600">Booking</text>
+
+        <!-- Live Queue -->
+        <circle cx="360" cy="110" r="32" fill="#fff" stroke="#1C8C99" stroke-width="1.5"/>
+        <text x="360" y="112" text-anchor="middle" fill="#062E4A" font-family="Inter, sans-serif" font-size="9" font-weight="600">Live Queue</text>
+
+        <!-- Micro-Warehouses -->
+        <circle cx="90" cy="260" r="32" fill="#fff" stroke="#4C8F3E" stroke-width="1.5"/>
+        <text x="90" y="256" text-anchor="middle" fill="#062E4A" font-family="Inter, sans-serif" font-size="8.5" font-weight="600">Micro-</text>
+        <text x="90" y="267" text-anchor="middle" fill="#062E4A" font-family="Inter, sans-serif" font-size="8.5" font-weight="600">Warehouses</text>
+
+        <!-- Transport -->
+        <circle cx="390" cy="260" r="32" fill="#fff" stroke="#E3A13B" stroke-width="1.5"/>
+        <text x="390" y="264" text-anchor="middle" fill="#062E4A" font-family="Inter, sans-serif" font-size="9" font-weight="600">Transport</text>
+
+        <!-- Banks -->
+        <circle cx="150" cy="390" r="32" fill="#fff" stroke="#0A4870" stroke-width="1.5"/>
+        <text x="150" y="394" text-anchor="middle" fill="#062E4A" font-family="Inter, sans-serif" font-size="9" font-weight="600">Banks</text>
+
+        <!-- Cold Storage -->
+        <circle cx="330" cy="390" r="32" fill="#fff" stroke="#1C8C99" stroke-width="1.5"/>
+        <text x="330" y="386" text-anchor="middle" fill="#062E4A" font-family="Inter, sans-serif" font-size="8.5" font-weight="600">Cold</text>
+        <text x="330" y="397" text-anchor="middle" fill="#062E4A" font-family="Inter, sans-serif" font-size="8.5" font-weight="600">Storage</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="trust-strip">
+  <div class="wrap">
+    <span>Farmers &amp; FPOs</span>
+    <span>APMCs / Mandis</span>
+    <span>Warehouses &amp; Cold Storages</span>
+    <span>Logistics Networks</span>
+    <span>Government Infrastructure</span>
+    <span>Banks &amp; Financial Institutions</span>
+    <span>Buyers &amp; Processors</span>
+  </div>
+</div>
+
+<!-- ============================= PROBLEM ============================= -->
+<section class="section" id="problem">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">The Hidden Challenges</span>
+      <h2>The hidden challenges behind India's post-harvest ecosystem</h2>
+      <p class="lede">The challenge is not infrastructure. The challenge is fragmented coordination.</p>
+    </div>
+
+    <div class="problem-grid reveal">
+      <div class="problem-card">
+        <span class="num">01</span>
+        <h4>Harvest season congestion</h4>
+        <p>Long queues, delayed mandi entry, unmanaged arrival peaks.</p>
+      </div>
+      <div class="problem-card">
+        <span class="num">02</span>
+        <h4>Invisible warehouse capacity</h4>
+        <p>No real-time visibility into availability, quality, or pricing.</p>
+      </div>
+      <div class="problem-card">
+        <span class="num">03</span>
+        <h4>Manual booking processes</h4>
+        <p>Paper-based systems create delays, errors, and opacity.</p>
+      </div>
+      <div class="problem-card">
+        <span class="num">04</span>
+        <h4>No demand forecasting</h4>
+        <p>Absence of predictive tools drives poor planning and post-harvest losses.</p>
+      </div>
+      <div class="problem-card">
+        <span class="num">05</span>
+        <h4>Underutilized village godowns</h4>
+        <p>Thousands of local storage facilities remain idle year-round.</p>
+      </div>
+      <div class="problem-card">
+        <span class="num">06</span>
+        <h4>Fragmented scheme access</h4>
+        <p>Government programs remain disconnected from field-level operations.</p>
+      </div>
+    </div>
+
+    <div class="compare reveal">
+      <div class="compare-col today">
+        <span class="compare-label">TODAY</span>
+        <h3>Fragmented ecosystem</h3>
+        <ul class="compare-list">
+          <li>Farmers operate with no mandi visibility or scheduling</li>
+          <li>Mandis run manual, uncoordinated operations</li>
+          <li>Warehouses report no real-time capacity data</li>
+          <li>Cold storage sits disconnected from supply chains</li>
+          <li>Transport runs on unoptimized routing and logistics</li>
+          <li>Government schemes stay fragmented and inaccessible at field level</li>
+        </ul>
+      </div>
+      <div class="compare-col tomorrow">
+        <span class="compare-label">TOMORROW, VIA CARGO HUB</span>
+        <h3>One connected ecosystem</h3>
+        <ul class="compare-list">
+          <li>Farmers, mandis, warehouses, cold storage, transport, banks and government schemes connect through one intelligent platform</li>
+          <li>Real-time coordination replaces manual, disconnected operations</li>
+          <li>Shared visibility across every stakeholder in the chain</li>
+        </ul>
+      </div>
+    </div>
+    <p class="compare-quote reveal">"India does not need more isolated applications. India needs connected agricultural infrastructure."</p>
+  </div>
+</section>
+
+<!-- ============================= PLATFORM ============================= -->
+<section class="section on-cool" id="platform">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="kicker">One Intelligent Platform</span>
+      <h2>Everything agriculture needs. One intelligent platform.</h2>
+      <p class="lede">The platform consolidates every critical post-harvest function — from mandi scheduling and warehouse discovery to AI-driven harvest planning and government scheme access — into a single, unified digital infrastructure layer.</p>
+    </div>
+
+    <div class="quadrants reveal">
+      <div class="quad-card q-mandi">
+        <div class="quad-top">
+          <span class="quad-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0A4870" stroke-width="1.8"><path d="M3 9l9-6 9 6M4 9v11h16V9"/><path d="M9 20v-6h6v6"/></svg>
+          </span>
+          <h3>Mandi Operations</h3>
+        </div>
+        <ul>
+          <li>Smart Mandi Operations</li>
+          <li>Harvest Slot Booking</li>
+          <li>Live Queue Management</li>
+          <li>Predictive Crowd Management</li>
+        </ul>
+      </div>
+      <div class="quad-card q-storage">
+        <div class="quad-top">
+          <span class="quad-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1C8C99" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M3 7l9-4 9 4"/></svg>
+          </span>
+          <h3>Storage Network</h3>
+        </div>
+        <ul>
+          <li>Warehouse Discovery</li>
+          <li>Warehouse Booking</li>
+          <li>Micro Warehouse Network</li>
+          <li>Cold Storage &amp; Facility Rating</li>
+        </ul>
+      </div>
+      <div class="quad-card q-intel">
+        <div class="quad-top">
+          <span class="quad-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4C8F3E" stroke-width="1.8"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+          </span>
+          <h3>Intelligence Layer</h3>
+        </div>
+        <ul>
+          <li>AI Harvest Planning</li>
+          <li>Demand Forecasting</li>
+          <li>Inventory Management</li>
+          <li>Analytics Dashboard</li>
+        </ul>
+      </div>
+      <div class="quad-card q-infra">
+        <div class="quad-top">
+          <span class="quad-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E3A13B" stroke-width="1.8"><rect x="1" y="9" width="14" height="9"/><path d="M15 12h4l3 3v3h-7z"/><circle cx="6" cy="20" r="1.6"/><circle cx="17.5" cy="20" r="1.6"/></svg>
+          </span>
+          <h3>Infrastructure Access</h3>
+        </div>
+        <ul>
+          <li>Transport Integration</li>
+          <li>Government Scheme Hub</li>
+          <li>Digital Documentation</li>
+          <li>Real-time Notifications</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= SMART MANDI ============================= -->
+<section class="section" id="smart-mandi">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Smart Mandi Operations</span>
+      <h2>Eliminating congestion at the mandi gate</h2>
+      <p class="lede">The platform digitizes end-to-end mandi workflows, eliminating congestion, reducing spoilage, and enabling data-driven arrival management at scale.</p>
+    </div>
+
+    <div class="flow reveal">
+      <div class="flow-step">
+        <span class="fi">STEP 1</span>
+        <h4>Harvest Booking</h4>
+        <p>Farmers pre-register arrival windows.</p>
+      </div>
+      <div class="flow-step">
+        <span class="fi">STEP 2</span>
+        <h4>Live Queue Tracking</h4>
+        <p>Real-time truck entry and sequencing.</p>
+      </div>
+      <div class="flow-step">
+        <span class="fi">STEP 3</span>
+        <h4>Congestion Monitor</h4>
+        <p>AI-based arrival forecasting and load balancing.</p>
+      </div>
+      <div class="flow-step">
+        <span class="fi">STEP 4</span>
+        <h4>Faster Unloading</h4>
+        <p>Optimized bays and digital documentation.</p>
+      </div>
+    </div>
+
+    <div class="cap-out reveal">
+      <div>
+        <h4>Core Capabilities</h4>
+        <div class="co-list">
+          <div class="co-item">
+            <div class="co-t">Harvest Slot Booking</div>
+            <div class="co-d">Pre-scheduled, conflict-free arrival windows.</div>
+          </div>
+          <div class="co-item">
+            <div class="co-t">Live Queue Management</div>
+            <div class="co-d">Real-time truck entry and sequencing.</div>
+          </div>
+          <div class="co-item">
+            <div class="co-t">Predictive Crowd Management</div>
+            <div class="co-d">AI-based arrival forecasting.</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h4>Outcomes</h4>
+        <div class="co-list">
+          <div class="co-item">
+            <div class="co-t">Reduced Waiting</div>
+            <div class="co-d">Faster mandi entry.</div>
+          </div>
+          <div class="co-item">
+            <div class="co-t">Better Planning</div>
+            <div class="co-d">Data-driven operations for mandi authorities.</div>
+          </div>
+          <div class="co-item">
+            <div class="co-t">Lower Spoilage</div>
+            <div class="co-d">Timely, precision-planned processing.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= STORAGE NETWORK ============================= -->
+<section class="section on-cool" id="storage-network">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Smart Storage Network</span>
+      <h2>Unlocking hidden capacity across rural India</h2>
+      <p class="lede">The platform provides real-time visibility into certified warehouse capacity, quality ratings, and transparent pricing — enabling farmers and FPOs to make informed storage decisions instantly.</p>
+    </div>
+
+    <div class="split reveal">
+      <div class="split-block">
+        <h3>Real-time warehouse discovery &amp; booking</h3>
+        <div class="pill-list">
+          <div class="pill">
+            <span class="pill-mark teal"></span>
+            <div><div class="pt">Nearby Warehouse Discovery</div><div class="ps">Location-based search with distance, capacity, and storage-type filters.</div></div>
+          </div>
+          <div class="pill">
+            <span class="pill-mark green"></span>
+            <div><div class="pt">Transparent Pricing &amp; Digital Booking</div><div class="ps">Standardized rates, instant confirmation, and digital receipts.</div></div>
+          </div>
+          <div class="pill">
+            <span class="pill-mark amber"></span>
+            <div><div class="pt">Smart Allocation Engine</div><div class="ps">If one warehouse is full, the platform auto-recommends the nearest certified alternative.</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="split-block">
+        <h3>Village Micro Warehouse Network</h3>
+        <div class="flow" style="margin-top:4px;">
+          <div class="flow-step" style="min-width:150px; padding-top:0;">
+            <h4 style="font-size:14.5px;">Owner Registration</h4>
+            <p>Register unused village storage.</p>
+          </div>
+          <div class="flow-step" style="min-width:150px; padding-top:0;">
+            <h4 style="font-size:14.5px;">Inspection</h4>
+            <p>Certified inspectors assess quality.</p>
+          </div>
+          <div class="flow-step" style="min-width:150px; padding-top:0;">
+            <h4 style="font-size:14.5px;">Certification</h4>
+            <p>Approved and listed with ratings.</p>
+          </div>
+          <div class="flow-step" style="min-width:150px; padding-top:0;">
+            <h4 style="font-size:14.5px;">Digital Booking</h4>
+            <p>Farmers and FPOs reserve space.</p>
+          </div>
+          <div class="flow-step" style="min-width:150px; padding-top:0;">
+            <h4 style="font-size:14.5px;">Income Generation</h4>
+            <p>Owners earn from idle assets.</p>
+          </div>
+        </div>
+        <div class="callout">
+          <strong>Creates a national-grade storage network</strong> by activating existing rural infrastructure — no new construction needed.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= GOVERNMENT SCHEMES ============================= -->
+<section class="section" id="government-schemes">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="kicker">Government Integration</span>
+      <h2>A digital implementation layer for national programs</h2>
+    </div>
+    <p class="gov-positioning reveal">"Cargo Hub strengthens the implementation of existing government initiatives rather than replacing them."</p>
+
+    <div class="scheme-grid reveal">
+      <div class="scheme-card">
+        <div class="sc-abbr">AIF</div>
+        <div class="sc-name">Agriculture Infrastructure Fund</div>
+      </div>
+      <div class="scheme-card">
+        <div class="sc-abbr">e-NAM</div>
+        <div class="sc-name">National Agriculture Market Integration</div>
+      </div>
+      <div class="scheme-card">
+        <div class="sc-abbr">e-NWR</div>
+        <div class="sc-name">Negotiable Warehouse Receipt System</div>
+      </div>
+      <div class="scheme-card">
+        <div class="sc-abbr">PMKSY</div>
+        <div class="sc-name">PM Kisan Sampada Yojana</div>
+      </div>
+    </div>
+
+    <div class="workflow-card reveal">
+      <h3>Platform-Assisted Scheme Workflow</h3>
+      <div class="wf-grid">
+        <div class="wf-item">
+          <div class="wf-n">01</div>
+          <div class="wf-t">Eligibility Check</div>
+          <div class="wf-d">Automated scheme matching.</div>
+        </div>
+        <div class="wf-item">
+          <div class="wf-n">02</div>
+          <div class="wf-t">Documentation Support</div>
+          <div class="wf-d">Guided digital submission.</div>
+        </div>
+        <div class="wf-item">
+          <div class="wf-n">03</div>
+          <div class="wf-t">Approval Tracking</div>
+          <div class="wf-d">Real-time status visibility.</div>
+        </div>
+        <div class="wf-item">
+          <div class="wf-n">04</div>
+          <div class="wf-t">Renewal Alerts</div>
+          <div class="wf-d">Proactive compliance reminders.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= ECOSYSTEM IMPACT ============================= -->
+<section class="section on-cool" id="ecosystem-impact">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Ecosystem Value</span>
+      <h2>Measurable outcomes across every stakeholder</h2>
+    </div>
+
+    <div class="tabs-nav reveal" id="stakeholderTabs">
+      <button class="tab-btn active" data-tab="farmers">Farmers &amp; FPOs</button>
+      <button class="tab-btn" data-tab="warehouses">Warehouse Owners</button>
+      <button class="tab-btn" data-tab="mandis">Mandis &amp; APMCs</button>
+      <button class="tab-btn" data-tab="transporters">Transporters</button>
+      <button class="tab-btn" data-tab="banks">Banks &amp; Institutions</button>
+      <button class="tab-btn" data-tab="buyers">Buyers &amp; Processors</button>
+      <button class="tab-btn" data-tab="government">Government</button>
+    </div>
+
+    <div class="tab-panels reveal">
+      <div class="tab-panel active" data-panel="farmers">
+        <div>
+          <h3>Farmers &amp; FPOs</h3>
+          <p class="tp-desc">Direct storage access and clearer harvest planning, with visibility into mandi and warehouse operations that used to run entirely on the ground.</p>
+          <ul class="tp-benefits">
+            <li>Reduced wait times</li>
+            <li>Better harvest planning</li>
+            <li>Direct storage access</li>
+          </ul>
+        </div>
+        <div class="tp-visual" style="background:linear-gradient(135deg,#4C8F3E,#2f6626);">🌾</div>
+      </div>
+      <div class="tab-panel" data-panel="warehouses">
+        <div>
+          <h3>Warehouse Owners</h3>
+          <p class="tp-desc">Higher facility utilization through recurring booking volume, with transparent operations and timely payments.</p>
+          <ul class="tp-benefits">
+            <li>Higher warehouse utilization</li>
+            <li>Recurring booking volume</li>
+            <li>Transparent operations</li>
+          </ul>
+        </div>
+        <div class="tp-visual" style="background:linear-gradient(135deg,#1C8C99,#0f5a63);">🏭</div>
+      </div>
+      <div class="tab-panel" data-panel="mandis">
+        <div>
+          <h3>Mandis &amp; APMCs</h3>
+          <p class="tp-desc">Streamlined arrivals and reduced crowd chaos, backed by data visibility that supports better infrastructure planning.</p>
+          <ul class="tp-benefits">
+            <li>Streamlined arrivals</li>
+            <li>Reduced crowd chaos</li>
+            <li>Data visibility</li>
+          </ul>
+        </div>
+        <div class="tp-visual" style="background:linear-gradient(135deg,#0A4870,#062E4A);">🏛️</div>
+      </div>
+      <div class="tab-panel" data-panel="transporters">
+        <div>
+          <h3>Transporters</h3>
+          <p class="tp-desc">Route optimization and better scheduling that cut down on empty runs across the network.</p>
+          <ul class="tp-benefits">
+            <li>Route optimization</li>
+            <li>Better scheduling</li>
+            <li>Reduced empty runs</li>
+          </ul>
+        </div>
+        <div class="tp-visual" style="background:linear-gradient(135deg,#E3A13B,#b57a24);">🚚</div>
+      </div>
+      <div class="tab-panel" data-panel="banks">
+        <div>
+          <h3>Banks &amp; Financial Institutions</h3>
+          <p class="tp-desc">Real-time warehouse visibility for collateral-backed lending, making agricultural financing easier to extend.</p>
+          <ul class="tp-benefits">
+            <li>Warehouse visibility for collateral</li>
+            <li>Easier agricultural financing</li>
+          </ul>
+        </div>
+        <div class="tp-visual" style="background:linear-gradient(135deg,#0A4870,#1C8C99);">🏦</div>
+      </div>
+      <div class="tab-panel" data-panel="buyers">
+        <div>
+          <h3>Buyers &amp; Processors</h3>
+          <p class="tp-desc">Transparent procurement with direct warehouse access and full supply chain visibility.</p>
+          <ul class="tp-benefits">
+            <li>Direct warehouse access</li>
+            <li>Supply chain transparency</li>
+          </ul>
+        </div>
+        <div class="tp-visual" style="background:linear-gradient(135deg,#4C8F3E,#1C8C99);">📦</div>
+      </div>
+      <div class="tab-panel" data-panel="government">
+        <div>
+          <h3>Government</h3>
+          <p class="tp-desc">Better infrastructure utilization and data-driven policy insights drawn directly from ground-level activity.</p>
+          <ul class="tp-benefits">
+            <li>Better infrastructure utilization</li>
+            <li>Data-driven policy insights</li>
+          </ul>
+        </div>
+        <div class="tp-visual" style="background:linear-gradient(135deg,#062E4A,#0A4870);">🏢</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= REVENUE MODEL ============================= -->
+<section class="section" id="revenue-model">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Revenue Model</span>
+      <h2>Diversified revenue engine &amp; deployment strategy</h2>
+      <p class="lede">A central operating hub connects differentiated revenue lines that convert underused storage capacity into recurring, high-margin services.</p>
+    </div>
+
+    <div class="revenue-grid reveal">
+      <div class="rev-card">
+        <div class="rv-t">Shared Storage Charges</div>
+        <div class="rv-d">Flexible weekly / monthly storage billed per pallet or square foot.</div>
+      </div>
+      <div class="rev-card">
+        <div class="rv-t">Inward &amp; Outward Handling</div>
+        <div class="rv-d">Loading, unloading, consolidation and destuffing services.</div>
+      </div>
+      <div class="rev-card">
+        <div class="rv-t">E-commerce Fulfilment</div>
+        <div class="rv-d">Pick, pack, returns and brand fulfilment for D2C &amp; marketplace sellers.</div>
+      </div>
+      <div class="rev-card">
+        <div class="rv-t">Managed Warehouse Manpower</div>
+        <div class="rv-d">Contracted teams supplied, trained and managed to client SLAs.</div>
+      </div>
+      <div class="rev-card">
+        <div class="rv-t">WMS / QR Inventory SaaS</div>
+        <div class="rv-d">Lightweight inventory and traceability subscriptions charged per site or user.</div>
+      </div>
+      <div class="rev-card">
+        <div class="rv-t">Transport Coordination Margins</div>
+        <div class="rv-d">Coordination margin on transport bookings routed through the platform.</div>
+      </div>
+    </div>
+
+    <div class="section-head reveal" style="margin-top:8px;">
+      <span class="kicker">Capital Allocation</span>
+      <h2 style="font-size:28px;">US $1M seed deployment</h2>
+      <p class="lede">Building the first repeatable operating model.</p>
+    </div>
+
+    <div class="capital-wrap reveal">
+      <div class="capital-chart">
+        <div style="width:280px;height:280px;border-radius:50%;margin:0 auto;
+          background:conic-gradient(
+            #062E4A 0% 23%,
+            #0A4870 23% 42%,
+            #0F5D77 42% 57%,
+            #1C8C99 57% 67%,
+            #3B9B87 67% 77%,
+            #4C8F3E 77% 85%,
+            #E3A13B 85% 93%,
+            #C77F2B 93% 97%,
+            #8A5A22 97% 100%
+          );
+          -webkit-mask:radial-gradient(circle, transparent 62%, black 63%);
+                  mask:radial-gradient(circle, transparent 62%, black 63%);">
+        </div>
+      </div>
+      <div class="capital-legend">
+        <div class="cap-row"><span class="cap-swatch" style="background:#062E4A;"></span><span class="cap-name">Warehouse racking, equipment, CCTV &amp; safety</span><span class="cap-pct">23%</span></div>
+        <div class="cap-row"><span class="cap-swatch" style="background:#0A4870;"></span><span class="cap-name">Working capital reserve</span><span class="cap-pct">19%</span></div>
+        <div class="cap-row"><span class="cap-swatch" style="background:#0F5D77;"></span><span class="cap-name">Warehouse deposits, rent &amp; utilities</span><span class="cap-pct">15%</span></div>
+        <div class="cap-row"><span class="cap-swatch" style="background:#1C8C99;"></span><span class="cap-name">WMS, dashboards &amp; tech</span><span class="cap-pct">10%</span></div>
+        <div class="cap-row"><span class="cap-swatch" style="background:#3B9B87;"></span><span class="cap-name">Operations &amp; training team</span><span class="cap-pct">10%</span></div>
+        <div class="cap-row"><span class="cap-swatch" style="background:#4C8F3E;"></span><span class="cap-name">Sales &amp; customer acquisition</span><span class="cap-pct">8%</span></div>
+        <div class="cap-row"><span class="cap-swatch" style="background:#E3A13B;"></span><span class="cap-name">Contingency reserve</span><span class="cap-pct">8%</span></div>
+        <div class="cap-row"><span class="cap-swatch" style="background:#C77F2B;"></span><span class="cap-name">Central management</span><span class="cap-pct">4%</span></div>
+        <div class="cap-row"><span class="cap-swatch" style="background:#8A5A22;"></span><span class="cap-name">Compliance, insurance &amp; legal</span><span class="cap-pct">3%</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= ROADMAP ============================= -->
+<section class="section on-navy" id="roadmap">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Roadmap</span>
+      <h2>Aggressive five-year scaling vision</h2>
+    </div>
+
+    <div class="roadmap reveal">
+      <div class="roadmap-line"></div>
+      <div class="rm-item is-current">
+        <span class="rm-dot"></span>
+        <span class="rm-phase">PHASE 1</span>
+        <h4>Operating Model Validation &amp; Core Density</h4>
+        <p>Establish and validate the core operating model, building density in initial markets.</p>
+      </div>
+      <div class="rm-item">
+        <span class="rm-dot"></span>
+        <span class="rm-phase">PHASE 2</span>
+        <h4>Multi-Service Cross-Sell</h4>
+        <p>Expand into handling services and WMS subscriptions across the existing network.</p>
+      </div>
+      <div class="rm-item">
+        <span class="rm-dot"></span>
+        <span class="rm-phase">PHASE 3</span>
+        <h4>Network Scaling &amp; Transport Integration</h4>
+        <p>Scale the network footprint and integrate transport coordination.</p>
+      </div>
+      <div class="rm-item">
+        <span class="rm-dot"></span>
+        <span class="rm-phase">PHASE 4</span>
+        <h4>Institutional &amp; Bank Collateral Expansion</h4>
+        <p>Expand institutional partnerships and bank collateral-linked lending.</p>
+      </div>
+      <div class="rm-item">
+        <span class="rm-dot"></span>
+        <span class="rm-phase">PHASE 5</span>
+        <h4>National Integrated Infrastructure Network</h4>
+        <p>Operate as a national, integrated post-harvest infrastructure network.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= FINAL CTA ============================= -->
+<section class="section--tight">
+  <div class="final-cta reveal">
+    <h2>Transform India's post-harvest future with us.</h2>
+    <p>Whether you are a warehouse owner, farmer collective, mandi authority, transporter, or enterprise buyer — Cargo Hub provides the digital backbone for your operations.</p>
+    <div class="final-cta-btns">
+      <button class="btn btn-primary" data-open-modal="mandi">Book Mandi Slot</button>
+      <button class="btn btn-amber" data-open-modal="warehouse">List Your Warehouse</button>
+      <a href="#about-contact" class="btn btn-ghost" style="border-color:rgba(255,255,255,0.3); color:#fff;">Partner With Cargo Hub</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= FOOTER / CONTACT ============================= -->
+<footer class="site-footer" id="about-contact">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/cargohub-logo.jpeg" alt="Cargo Hub logo">
+          <span class="footer-brand-name">Cargo Hub</span>
+        </div>
+        <p class="footer-tag">Building India's Intelligent Post-Harvest Infrastructure.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#platform">Platform</a></li>
+          <li><a href="#smart-mandi">Smart Mandi</a></li>
+          <li><a href="#storage-network">Storage Network</a></li>
+          <li><a href="#government-schemes">Government Schemes</a></li>
+          <li><a href="#ecosystem-impact">Ecosystem Impact</a></li>
+          <li><a href="#revenue-model">Revenue Model</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li>13, Institutional Area, Lodhi Road, New Delhi 110003</li>
+          <li><a href="mailto:globalexpressgroup@gmail.com">globalexpressgroup@gmail.com</a></li>
+          <li><a href="tel:+919650560277">96505 60277</a></li>
+          <li><a href="tel:+919910196123">99101 96123</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Cargo Hub. All rights reserved.</span>
+      <span>Building India's Intelligent Post-Harvest Infrastructure.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================= MODAL: BOOK MANDI SLOT ============================= -->
+<div class="modal-overlay" id="modal-mandi">
+  <div class="modal">
+    <div class="modal-top">
+      <h3>Book Mandi Slot / Arrival</h3>
+      <button class="modal-close" data-close-modal aria-label="Close">&times;</button>
+    </div>
+    <p class="modal-sub">Reserve a pre-scheduled arrival window and skip the queue.</p>
+    <form id="form-mandi">
+      <div class="form-row">
+        <label for="mandi-name">Full Name</label>
+        <input type="text" id="mandi-name" name="name" required>
+      </div>
+      <div class="form-row">
+        <label for="mandi-phone">Phone</label>
+        <input type="tel" id="mandi-phone" name="phone" required>
+      </div>
+      <div class="form-grid-2">
+        <div class="form-row">
+          <label for="mandi-commodity">Commodity</label>
+          <input type="text" id="mandi-commodity" name="commodity" required>
+        </div>
+        <div class="form-row">
+          <label for="mandi-tonnage">Estimated Tonnage</label>
+          <input type="text" id="mandi-tonnage" name="tonnage" placeholder="e.g. 5 MT" required>
+        </div>
+      </div>
+      <div class="form-grid-2">
+        <div class="form-row">
+          <label for="mandi-target">Target Mandi</label>
+          <input type="text" id="mandi-target" name="mandi" required>
+        </div>
+        <div class="form-row">
+          <label for="mandi-date">Preferred Date</label>
+          <input type="date" id="mandi-date" name="date" required>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Submit Request</button>
+      <p class="form-note">Our team will confirm your slot shortly after submission.</p>
+    </form>
+    <div class="form-success" id="success-mandi">
+      <div class="fs-icon">✓</div>
+      <h4>Slot request received</h4>
+      <p>We'll confirm your arrival window shortly.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================= MODAL: LIST FACILITY / WAREHOUSE ============================= -->
+<div class="modal-overlay" id="modal-warehouse">
+  <div class="modal">
+    <div class="modal-top">
+      <h3>List Facility / Warehouse</h3>
+      <button class="modal-close" data-close-modal aria-label="Close">&times;</button>
+    </div>
+    <p class="modal-sub">Register your facility and start earning from available capacity.</p>
+    <form id="form-warehouse">
+      <div class="form-grid-2">
+        <div class="form-row">
+          <label for="wh-owner">Owner Name</label>
+          <input type="text" id="wh-owner" name="owner" required>
+        </div>
+        <div class="form-row">
+          <label for="wh-org">Organization</label>
+          <input type="text" id="wh-org" name="org">
+        </div>
+      </div>
+      <div class="form-row">
+        <label for="wh-type">Facility Type</label>
+        <select id="wh-type" name="type" required>
+          <option value="">Select facility type</option>
+          <option value="warehouse">Warehouse</option>
+          <option value="cold-storage">Cold Storage</option>
+          <option value="village-godown">Village Godown</option>
+        </select>
+      </div>
+      <div class="form-grid-2">
+        <div class="form-row">
+          <label for="wh-capacity">Capacity (Sq Ft / MT)</label>
+          <input type="text" id="wh-capacity" name="capacity" required>
+        </div>
+        <div class="form-row">
+          <label for="wh-location">Location</label>
+          <input type="text" id="wh-location" name="location" required>
+        </div>
+      </div>
+      <div class="form-grid-2">
+        <div class="form-row">
+          <label for="wh-phone">Phone</label>
+          <input type="tel" id="wh-phone" name="phone" required>
+        </div>
+        <div class="form-row">
+          <label for="wh-email">Email</label>
+          <input type="email" id="wh-email" name="email" required>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Submit Facility</button>
+      <p class="form-note">Our team will review and reach out to complete certification.</p>
+    </form>
+    <div class="form-success" id="success-warehouse">
+      <div class="fs-icon">✓</div>
+      <h4>Facility submitted</h4>
+      <p>Our team will reach out to complete inspection &amp; certification.</p>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
