@@ -10,39 +10,44 @@
 --------------------------------------------------------------------------- */
 const FORM_CONFIG = {
   mandiSlot: {
-    baseUrl: "GOOGLE_FORM_URL_HERE",
-    fields: {
-      name: "entry.000000001",
-      phone: "entry.000000002",
-      commodity: "entry.000000003",
-      tonnage: "entry.000000004",
-      mandi: "entry.000000005",
-      date: "entry.000000006"
-    }
-  },
-  warehousePartner: {
-    baseUrl: "GOOGLE_FORM_URL_HERE",
-    fields: {
-      owner: "entry.000000011",
-      org: "entry.000000012",
-      type: "entry.000000013",
-      capacity: "entry.000000014",
-      location: "entry.000000015",
-      phone: "entry.000000016",
-      email: "entry.000000017"
-    }
+  baseUrl: "https://docs.google.com/forms/d/e/1FAIpQLSf3yUJAtRYpzS9uLb_v6KjzsEjk3a-9Q2UONR9Lga2CmdCLzA/viewform",
+  fields: {
+    name: "entry.427606034",
+    phone: "entry.1927535956",
+    commodity: "entry.1518042230",
+    tonnage: "entry.1060270397",
+    mandi: "entry.671281546"
   }
+},
+  warehousePartner: {
+  baseUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdoJbbTdYZpucZ-E6mESdJ9Q6RpUpEGGNrS1yKzZ486_g-8BA/viewform",
+  fields: {
+    owner: "entry.1138686358",
+    org: "entry.349638104",
+    type: "entry.2092395122",
+    capacity: "entry.1144656453",
+    location: "entry.1972756176",
+    phone: "entry.280928650",
+    email: "entry.1517151007"
+  }
+}
 };
 
 /* Builds a prefilled Google Form URL from a config + form data object */
 function buildPrefillUrl(config, data) {
-  if (!config.baseUrl || config.baseUrl === "GOOGLE_FORM_URL_HERE") return null;
+  if (!config.baseUrl) return null;
+
   const url = new URL(config.baseUrl);
+
   Object.keys(config.fields).forEach((key) => {
     const entryId = config.fields[key];
     const value = data[key];
-    if (value) url.searchParams.set(entryId, value);
+
+    if (value) {
+      url.searchParams.set(entryId, value);
+    }
   });
+
   return url.toString();
 }
 
@@ -56,6 +61,7 @@ function submitToGoogleForm(prefillUrl) {
   // iframe.style.display = 'none';
   // document.body.appendChild(iframe);
   // fetch(prefillUrl, { mode: 'no-cors' });
+  window.open(prefillUrl, "_blank", "noopener,noreferrer");
 }
 
 document.addEventListener("DOMContentLoaded", () => {
