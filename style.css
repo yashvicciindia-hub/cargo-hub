@@ -2300,3 +2300,296 @@ body.chb-open .chb-window {
     border-radius: 16px
   }
 }
+
+.app-download {
+  padding: 18px 0 84px;
+  background: var(--paper-cool)
+}
+
+.app-download-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  align-items: center;
+  gap: 48px;
+  padding: 52px 72px;
+  border: 1px solid rgba(10, 72, 112, 0.1);
+  border-radius: 24px;
+  background: var(--paper);
+  box-shadow: 0 18px 42px rgba(6, 32, 58, 0.07)
+}
+
+.app-download-copy {
+  max-width: 560px
+}
+
+.app-download-copy .kicker {
+  margin-bottom: 14px
+}
+
+.app-download-copy h2 {
+  max-width: 14ch;
+  font-size: clamp(36px, 4.2vw, 52px);
+  line-height: 1.08
+}
+
+.app-download-copy > p {
+  max-width: 52ch;
+  margin-top: 18px;
+  color: var(--ink-soft);
+  font-size: 17px;
+  line-height: 1.7
+}
+
+.app-download-button {
+  display: inline-flex;
+  min-height: 54px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
+  padding: 0 22px;
+  border: 1px solid var(--marine-deep);
+  border-radius: 8px;
+  background: var(--marine-deep);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 700;
+  transition: background-color .18s ease, border-color .18s ease
+}
+
+.app-download-button:hover {
+  border-color: var(--marine);
+  background: var(--marine)
+}
+
+.app-download-button:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 4px
+}
+
+.app-download-note {
+  display: block;
+  margin-top: 12px;
+  color: var(--ink-soft);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.025em
+}
+
+.app-download-note span {
+  padding: 0 4px;
+  color: var(--teal)
+}
+
+.app-phone-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px
+}
+
+.app-phone {
+  width: min(100%, 238px);
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 36px;
+  background: var(--paper-navy);
+  box-shadow: 0 20px 38px rgba(6, 32, 58, 0.2)
+}
+
+.app-phone-screen {
+  position: relative;
+  min-height: 408px;
+  overflow: hidden;
+  padding: 15px 15px 13px;
+  border-radius: 28px;
+  background: #fff
+}
+
+.app-phone-screen::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 76px;
+  height: 15px;
+  border-radius: 0 0 10px 10px;
+  background: var(--paper-navy);
+  content: "";
+  transform: translateX(-50%)
+}
+
+.app-phone-status {
+  display: flex;
+  justify-content: space-between;
+  color: var(--ink);
+  font-size: 8px;
+  font-weight: 700
+}
+
+.app-phone-status-icons {
+  letter-spacing: 2px
+}
+
+.app-phone-brand {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 20px;
+  color: var(--marine-deep);
+  font-size: 12px;
+  font-weight: 700
+}
+
+.app-phone-brand img {
+  width: 23px;
+  height: 23px;
+  border-radius: 6px;
+  object-fit: cover
+}
+
+.app-phone-intro {
+  display: grid;
+  gap: 7px;
+  margin-top: 20px
+}
+
+.app-phone-intro > span {
+  color: var(--teal);
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.1em
+}
+
+.app-phone-intro strong {
+  color: var(--marine-deep);
+  font-family: var(--font-display);
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.05
+}
+
+.app-phone-intro p {
+  color: var(--ink-soft);
+  font-size: 8px;
+  line-height: 1.5
+}
+
+.app-phone-services {
+  display: grid;
+  gap: 7px;
+  margin-top: 16px
+}
+
+.app-phone-services > div {
+  display: grid;
+  grid-template-columns: 28px 1fr auto;
+  align-items: center;
+  gap: 8px;
+  min-height: 51px;
+  padding: 7px;
+  border: 1px solid rgba(14, 27, 38, 0.08);
+  border-radius: 9px;
+  background: #fff
+}
+
+.app-phone-service-icon {
+  display: grid;
+  width: 27px;
+  height: 27px;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--paper-cool);
+  color: var(--marine);
+  font-size: 8px;
+  font-weight: 700
+}
+
+.app-phone-services strong,
+.app-phone-services small {
+  display: block
+}
+
+.app-phone-services strong {
+  color: var(--ink);
+  font-size: 8px
+}
+
+.app-phone-services small {
+  margin-top: 2px;
+  color: var(--ink-soft);
+  font-size: 6px
+}
+
+.app-phone-services b {
+  color: var(--teal);
+  font-size: 16px;
+  font-weight: 500
+}
+
+.app-phone-footer {
+  margin-top: 13px;
+  color: #74838D;
+  font-size: 6px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: center
+}
+
+.app-phone-caption {
+  color: var(--ink-soft);
+  font-size: 11px
+}
+
+@media (max-width: 900px) {
+  .app-download-panel {
+    grid-template-columns: minmax(0, 1fr) minmax(230px, 0.8fr);
+    gap: 28px;
+    padding: 44px 38px
+  }
+}
+
+@media (max-width: 768px) {
+  .app-download {
+    padding: 10px 0 68px
+  }
+
+  .app-download-panel {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 38px 28px
+  }
+
+  .app-download-copy h2 {
+    max-width: 18ch;
+    font-size: clamp(34px, 8vw, 44px)
+  }
+
+  .app-download-button {
+    min-height: 52px
+  }
+}
+
+@media (max-width: 420px) {
+  .app-download-panel {
+    gap: 28px;
+    padding: 30px 19px;
+    border-radius: 18px
+  }
+
+  .app-download-copy h2 {
+    font-size: clamp(32px, 9vw, 38px)
+  }
+
+  .app-download-copy > p {
+    font-size: 15px
+  }
+
+  .app-download-button {
+    width: 100%;
+    padding: 0 14px
+  }
+
+  .app-phone {
+    width: 224px
+  }
+}
